@@ -1,0 +1,70 @@
+GIT --> è un sistema di versionamento del codice
+        ci consente di tenere traccia delle modifiche che apportiamo 
+        al nostro progetto
+
+REPOSITORY --> è un insieme di salvataggi
+
+BRANCH        --> i branch sono diramazioni del nostro progetto
+Branch (main) --> Rappresenta il ramo principale del progetto
+              i branch ci permettono di lavorare su diverse funzionalità o su correzioni di bug
+	      senza influenzare il ramo principale	
+
+STATI DI GIT --> 1. non appena apportiamo una modifica al nostro progetto ci ritroviamo nelli 
+		    stato --> FILE NON TRACCIATI
+                 2. Con il comando "git add ." --> aggiunge i file allo STAGE (Tracciati)
+   
+
+Creazione di una repository locale:
+
+Aprire la Git BAsh
+
+1- git config --global user.email "fcluongo@gmail.com"
+2- git config --global user.name "Roberto Luongo"
+
+
+Questo comando di configurazone Globale serve per etichettare
+tutti i Commit
+
+
+Posizionarsi nella cartella del progetto di cui vogliamo salavare i cambiamenti
+
+1) git init --> andrà ad inizializzare una repository git vuota;
+2) git status --> visualizza lo stato dei file presenti nel repository
+3) git add . 
+4) git commit -m "initial commit"
+
+
+**************** CREAZIONE CHIAVI SSH *******************************
+1) Aprire Git Bash e verificare che sia nella root principale --> ~
+2) ssh-keygen 
+3) Accedere alla cartella .ssh
+4) visualizzare il contenuto del file Pubblica (id_rsa.pub) con "cat"
+5) Copiare la chiave 
+6) inserirla su GitHub --> Setting --> SSH Keys and GPG keys
+7) New SSH Key --> Inserire il nome e la chiave pubblica copiata
+
+
+**************** CREAZIONE REPOSITORY SU GIT HUB *********************
+1) HOME di Git Hub e cliccare su NEW
+2) Dare un nome alla repository
+3) Scegliere se renderla Pubblica e Privata e cliccare su "Create"
+
+
+**************** COLLEGARE REPOSITORY LOCALE CON REMOTA **************
+1) Aprire Git Bash e posizionarsi nella cartella del progetto ch vogliamo su Git Hub
+2) git remote add origin (url:SSH)
+3) git branch -M main (cambia il nome del branch)
+4) git push origin main ( carica su git hub tutte le modifiche apportate)
+
+*************** CONDIVIDERE UN PROGETTO ******************************
+1) Entrare nella Repository che voglio Clonare - non presente in locale
+2) Cliccare su <>Code --> Selezioniamo SSH e copiamo il l' URL
+
+nel pc dove voglio scaricare il progetto 
+1) Apro Git Bash e mi posiziono nella cartella dove scaricare il progetto
+2) git clone (URL Copiata)
+
+
+
+ 
+
